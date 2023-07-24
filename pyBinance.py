@@ -12,12 +12,12 @@ def on_message(ws, message):
         asks = sorted(data['a'], key=lambda x: float(x[0]))[:5][::-1] #to reverse the order
         os.system("cls")
         print("===========================================")
-        print("Top 5 Bids:")
+        print("Top 5 Bids:")   #exchanged values, that's why the bids are in the ask and the ask in the bids
         for ask in asks:
             print(f"Price: {ask[0]}, Quantity: {ask[1]}")
         print("===========================================")
         
-        print("Top 5 Asks:")
+        print("Top 5 Asks:")   #exchanged values, that's why the bids are in the ask and the ask in the bids
         for bid in bids:
             print(f"Price: {bid[0]}, Quantity: {bid[1]}")
         print("===========================================")
